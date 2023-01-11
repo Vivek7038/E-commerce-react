@@ -16,6 +16,8 @@ import Footer from "./components/Footer/Footer";
 import store from "./store/store";
 import { Provider } from "react-redux";
 import Payment from "./Payment.jsx";
+import Confirmation from './Checkout/Confirmation';
+import Contact from './Checkout/Contact';
 function App() {
   return (
     <div className="App">
@@ -35,6 +37,8 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             {/* searched products */}
             <Route path="/search/:searchTerm" element={<Search />} />
+            <Route path="/checkout" element={<Contact/> } />
+            <Route path="/success" element={<Confirmation/> } />
           </Routes>
 
           <Footer />

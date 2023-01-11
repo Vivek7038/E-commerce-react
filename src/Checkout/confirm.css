@@ -1,0 +1,21 @@
+.confirm{
+height: 100vh;
+width: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: -15% 10%;
+
+
+}
+
+.text{
+       display: flex;
+       font-size: 40rem;
+}
+.buttons{
+       color: blue;
+       font-size: 2px;
+       size: 2px;
+
+}

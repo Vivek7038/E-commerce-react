@@ -3,14 +3,16 @@ import Payment from '../../Payment';
 import "./CartPage.scss";
 import { useSelector, useDispatch } from 'react-redux';
 import { shopping_cart } from '../../utils/images';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate } from 'react-router-dom';
 import { formatPrice } from '../../utils/helpers';
 import { getAllCarts, removeFromCart, toggleCartQty, clearCart, getCartTotal } from '../../store/cartSlice';
+
 
 const CartPage = () => {
   const dispatch = useDispatch();
   const carts = useSelector(getAllCarts);
   const { itemsCount, totalAmount} = useSelector((state) => state.cart);
+ const  navigate=useNavigate();
 
   if(carts.length === 0){
     return (
@@ -108,7 +110,9 @@ const CartPage = () => {
                 <span className='text-orange fs-22 mx-2 fw-6'>{formatPrice(totalAmount)}</span>
               </div>
 
-              <button type = "button" className='checkout-btn text-white bg-orange fs-16'> <Payment/></button>
+              <button type = "button" className='checkout-btn text-white bg-orange fs-16' onClick={
+                navigate("/checkout")
+              }> Checkout</button>
             </div>
           </div>
         </div>

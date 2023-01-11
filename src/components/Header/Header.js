@@ -24,23 +24,25 @@ const Header = () => {
             <div className='header-cnt-top-r'>
               <ul className='top-links flex align-center'>
                 <li>
-                  <Link to = "/" className='top-link-itm'>
+                
+                
                     <span className='top-link-itm-ico mx-2'>
                       <i className='fa-solid fa-circle-question'></i>
                     </span>
                     <span className='top-link-itm-txt'>Support</span>
-                  </Link>
+               
+               
                 </li>
                 <li className='vert-line'></li>
                 <li>
                   <Link to = "/">
-                    <span className='top-link-itm-txt'>Register</span>
+                    <span className='top-link-itm-txt'style={{display:"none"}}>Register</span>
                   </Link>
                 </li>
-                <li className='vert-line'></li>
+             
                 <li>
                   <Link to = "/">
-                    <span className='top-link-itm-txt'>Log in</span>
+                    <span className='top-link-itm-txt'style={{display:"none"}}>Log in</span>
                   </Link>
                 </li>
               </ul>
